@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMB - Calculador de rutas</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    ¡
+    <div class="contenedor">
+      <form class="form-coordenadas">
+        <div class="coordenadas">
+          <h3>Desde:</h3>
+          <div class="grupo">
+            <input type="radio" id="de-mi-ubicacion" name="de" />
+            <label for="de-mi-ubicacion">Usar mi ubicación</label>
+          </div>
+          <div class="grupo">
+            <input type="radio" id="de-direccion" name="de" />
+            <label for="de-direccion">Introducir dirección</label>
+          </div>
+          <input
+            type="text"
+            class="de-direccion-definitiva direccion-definitiva"
+            placeholder="Introduce la dirección"
+          />
+          <span class="nombre-lugar"></span>
+        </div>
+        <div class="coordenadas">
+          <h3>Hasta:</h3>
+          <div class="grupo">
+            <input type="radio" id="a-mi-ubicacion" name="a" />
+            <label for="a-mi-ubicacion">Usar mi ubicación</label>
+          </div>
+          <div class="grupo">
+            <input type="radio" id="a-direccion" name="a" />
+            <label for="a-direccion">Introducir dirección</label>
+          </div>
+          <input
+            type="text"
+            class="a-direccion-definitiva direccion-definitiva"
+            placeholder="Introduce la dirección"
+          />
+          <span class="nombre-lugar"></span>
+        </div>
+        <button type="submit" class="enviar">Cómo ir</button>
+      </form>
+      <ul class="pasos">
+        <li class="paso paso-dummy">
+          <h3 class="paso-encabezado">
+            Paso <span class="paso-numero">1</span>: De
+            <span class="paso-from">Nombre origen</span> a
+            <span class="paso-to">Nombre destino</span>
+            <a href="" target="_blank" class="paso-mapa">(ver mapa)</a>
+          </h3>
+          <span class="paso-hora">Hora: <span class="dato">23:54</span></span>
+          <span class="paso-distancia"
+            >Distancia: <span class="dato">3m</span></span
+          >
+          <span class="paso-duracion"
+            >Duración: <span class="dato">3h</span></span
+          >
+          <div class="mapa"></div>
+          <span class="puntos"><span></span><span></span></span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

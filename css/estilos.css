@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h3 {
+  margin-top: 0;
+}
+.paso-dummy {
+  display: none;
+}
+.paso-hora,
+.paso-distancia,
+.paso-duracion,
+.paso-medio {
+  display: block;
+}
+.contenedor {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.paso {
+  background-color: #323232;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.paso a {
+  color: inherit;
+}
+.paso .mapa {
+  font-size: 30px;
+}
+.paso .puntos {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -21px;
+}
+.paso .puntos > * {
+  width: 6px;
+  height: 6px;
+  margin-bottom: 3px;
+  background-color: #e30613;
+  border-radius: 50%;
+}
+.paso:last-child .puntos {
+  display: none;
+}
+.form-coordenadas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.coordenadas {
+  flex: 0 45%;
+  padding: 15px;
+  background-color: #e30613;
+  color: #fff;
+}
+.coordenadas label {
+  display: inline-block;
+  width: 70px;
+}
+.coordenadas .input-coordenadas {
+  width: 100px;
+}
+input[type="text"] {
+  font-size: 16px;
+}
+.coordenadas input[type="radio"] {
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+.coordenadas input[type="radio"] + label {
+  display: inline;
+}
+.nombre-lugar {
+  margin-top: 30px;
+  min-height: 21.5px;
+  display: block;
+}
+.direccion-definitiva {
+  visibility: hidden;
+}
+.direccion-definitiva.on {
+  visibility: visible;
+}
+.enviar {
+  cursor: pointer;
+  margin: 20px auto 0;
+  font-size: 18px;
+  border: none;
+  background-color: #323232;
+  color: #fff;
+  padding: 10px 100px;
+}
+.paso-encabezado {
+  padding-right: 20px;
+}
+.walk:after,
+.bus:after,
+.subway:after {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 22px;
+}
+.walk:after {
+  content: "🚶‍♂️";
+}
+.bus:after {
+  content: "🚌";
+}
+.subway:after {
+  content: "🚇";
+}
+.mapa {
+  height: 200px;
+}
